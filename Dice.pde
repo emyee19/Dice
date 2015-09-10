@@ -33,7 +33,7 @@ class Die //models one single dice cube
   int numDots, myX, myY;
   Die(int x, int y) //constructor
   {
-    numDots =(int)((Math.random()*7)+1);
+    numDots = 1;
     myX=x;
     myY=y;
   }
@@ -45,30 +45,30 @@ class Die //models one single dice cube
   {  
     fill(255); 
     rect(myX, myY, 50, 50);
-    //   fill(0);
-    //     if (numDots==1)
-    //   {
-    //     ellipse(10,10)
-    //   };
-    //     if (numDots==2)
-    //   {
-    //     ellipse(10,10)
-    //   };
+      fill(0);
+         if (numDots==1)
+      {
+        ellipse(myX+25,myY+25,10,10);
+      }
+        if (numDots==2)
+      {
+        ellipse(10,10);
+      }
     //     if (numDots==3)
     //   {
-    //     ellipse(10,10)
-    //   };
+    //     ellipse(10,10);
+    //   }
     //     if (numDots==4)
     //   {
-    //     ellipse(10,10)
-    //   };
+    //     ellipse(10,10);
+    //   }
     //     if (numDots==5)
     //   {
-    //     ellipse(10,10)
-    //   };
+    //     ellipse(10,10);
+    //   }
     //     if (numDots==6)
     //   {
-    //     ellipse(10,10)
-    //   };
+    //     ellipse(10,10);
+    //   }
   }
 }
