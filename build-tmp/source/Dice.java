@@ -25,7 +25,7 @@ public void setup()
 }                                                                                                                                                        
 public void draw()
 {
-  background(0);
+  background(143,154,210);
   for (int y=100; y<=300; y+=100)
   {
     for (int x=100; x<=300; x+=100)
@@ -49,7 +49,7 @@ class Die //models one single dice cube
   int numDots, myX, myY;
   Die(int x, int y) //constructor
   {
-    numDots = 1;
+    numDots = (int)((Math.random()*6)+1);
     myX=x;
     myY=y;
   }
@@ -66,26 +66,41 @@ class Die //models one single dice cube
       {
         ellipse(myX+25,myY+25,10,10);
       }
-    //     if (numDots==2)
-    //   {
-    //     ellipse(10,10)
-    //   };
-    //     if (numDots==3)
-    //   {
-    //     ellipse(10,10)
-    //   };
-    //     if (numDots==4)
-    //   {
-    //     ellipse(10,10)
-    //   };
-    //     if (numDots==5)
-    //   {
-    //     ellipse(10,10)
-    //   };
-    //     if (numDots==6)
-    //   {
-    //     ellipse(10,10)
-    //   };
+        if (numDots==2)
+      {
+        ellipse(myX+13,myY+13,10,10);
+        ellipse(myX+38,myY+38,10,10);
+      }
+        if (numDots==3)
+      {
+        ellipse(myX+13,myY+13,10,10);
+        ellipse(myX+25,myY+25,10,10);
+        ellipse(myX+38,myY+38,10,10);
+      }
+        if (numDots==4)
+      {
+        ellipse(myX+13,myY+13,10,10);
+        ellipse(myX+38,myY+38,10,10);
+        ellipse(myX+13,myY+38,10,10);
+        ellipse(myX+38,myY+13,10,10);
+      }
+        if (numDots==5)
+      {
+        ellipse(myX+13,myY+13,10,10);
+        ellipse(myX+38,myY+38,10,10);
+        ellipse(myX+25,myY+25,10,10);
+        ellipse(myX+13,myY+38,10,10);
+        ellipse(myX+38,myY+13,10,10);
+      }
+        if (numDots==6)
+      {
+        ellipse(myX+13,myY+13,10,10);
+        ellipse(myX+38,myY+38,10,10);
+        ellipse(myX+13,myY+25,10,10);
+        ellipse(myX+38,myY+25,10,10);
+        ellipse(myX+13,myY+38,10,10);
+        ellipse(myX+38,myY+13,10,10);
+      }
   }
 }
   static public void main(String[] passedArgs) {
