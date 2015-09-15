@@ -1,6 +1,7 @@
 Die square;
 int reference;
 
+
 void setup()
 {  
   size(450, 450);
@@ -8,7 +9,7 @@ void setup()
   textAlign(CENTER);
 }                                                                                                                                                        
 void draw()
-{
+{ int sum =0;
   background(143,154,210);
   for (int y=100; y<=300; y+=100)
   {
@@ -17,8 +18,13 @@ void draw()
       square = new Die(x, y);
       square.roll();
       square.show();
+      sum=sum + square.numDots;
     }
   }
+
+  textSize(20);
+  fill(0);
+  text("Total Sum equals: " + sum, 200,400);
 
 
   
@@ -85,6 +91,6 @@ class Die //models one single dice cube
         ellipse(myX+13,myY+38,10,10);
         ellipse(myX+38,myY+13,10,10);
       }
-      
+
   }
 }
